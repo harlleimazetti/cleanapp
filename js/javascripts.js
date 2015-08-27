@@ -10,6 +10,19 @@ function onDeviceReady() {
 
 var map;
 
+$(document).on("mousedown", ".tabela_home tr td", function() {
+	$(this).addClass("ativa");	
+});
+
+$(document).on("mouseup", ".tabela_home tr td", function() {
+	$(this).removeClass("ativa");	
+});
+
+$(document).on("click", ".tabela_home tr td", function() {
+	var url = $(this).data('url');
+	$( ":mobile-pagecontainer" ).pagecontainer( "change", url );
+});
+
 $(document).on("pageshow", "#pontos_descarte", function () {
 	/*
 	var latitude = -15.797891799999999;

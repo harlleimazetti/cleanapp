@@ -34,8 +34,8 @@
 		<div style="margin-left:auto; margin-right:auto; width:16em; text-align:center; padding-top:30px">
     		<img src="img/logo-white.png" width="150">
 			<form style="margin-top:20px">
-    			<input type="text" data-theme="d" value="">
-	        	<input type="password" data-theme="d" value="">
+    			<input type="text" data-theme="d" value="" placeholder="E-mail">
+	        	<input type="password" data-theme="d" value="" placeholder="Senha">
 		        <a href="#inicio" data-role="button" data-theme="f" class="ui-btn-active">Entrar</a>
     		</form>
 		</div>
@@ -59,18 +59,61 @@
 			<h1>Início</h1>
 		</div><!-- /header -->
 		<div data-role="content">
-			<ul data-role="listview" data-inset="false">
-				<li data-role="list-divider">Notificações</li>
-				<li><a href="#">Coleta de Lixo - Hoje, 21/08<span class="ui-li-aside">15:00</span><p>Caminhão de coleta de lixo orgânico</p></a></li>
-				<li><a href="#">Coleta de Lixo - Amanhã, 22/08<span class="ui-li-aside">09:00</span><p>Caminhão de coleta seletiva</p></a></li>
-			</ul>
+        	<div class="profile_logo">
+            	<img src="img/harllei.jpg" class="img_home" />
+            </div>
+            <h2 class="profile_titulo">Bem vindo, Harllei!</h2>
+        	<table align="center" width="100%" class="tabela_home" cellpadding="0" cellspacing="0">
+            	<tr>
+                	<td align="center" data-url="#pontos_descarte">
+                    	<i class="fa fa-trash fa-2x"></i>
+			            <p class="profile_address">
+            				Pontos de descarte
+            			</p>
+                    </td>
+                    <td align="center" data-url="#horario_coleta">
+                    	<i class="fa fa-clock-o fa-2x"></i>
+			            <p class="profile_address">
+            				Horários de coleta
+            			</p>
+					</td>
+                </tr>
+            	<tr>
+                	<td align="center" data-url="#rastrear_coleta">
+                    	<i class="fa fa-map-marker fa-2x"></i>
+			            <p class="profile_address">
+            				Rastrear coleta
+            			</p>
+					</td>
+                    <td align="center" data-url="#servicos">
+                    	<i class="fa fa-cog fa-2x"></i>
+			            <p class="profile_address">
+            				Solicitar serviços
+            			</p>
+					</td>
+                </tr>
+            	<tr>
+                	<td align="center" data-url="#reportar">
+                    	<i class="fa fa-comment fa-2x"></i>
+			            <p class="profile_address">
+            				Reportar
+            			</p>
+					</td>
+                    <td align="center">
+                    	<i class="fa fa-envelope fa-2x"></i>
+			            <p class="profile_address">
+            				Mensagens
+            			</p>
+					</td>
+                </tr>
+            </table>
 		</div><!-- /content -->
 	</div><!-- /page -->
     
     <div data-role="page" id="pontos_descarte" data-theme="d">
 		<div data-role="header" data-position="fixed" data-theme="f">
 			<a href="#" data-rel="back" class="fa fa-chevron-left"></a>
-			<h1>Mapa</h1>
+			<h1>Pontos de Descarte</h1>
 		</div><!-- /header -->
     	<div data-role="content" id="content">
 
@@ -102,13 +145,16 @@
             </div>
             <h2 class="profile_titulo">Coop. de Reciclagem ABC</h2>
             <p class="profile_address">
-            SCLRN 706 Bloco C Loja 04 - Asa Norte<br>Brasília - DF, 72305-900
+            	SCLRN 706 Bloco C Loja 04 - Asa Norte<br>Brasília - DF, 72305-900
+            </p>
+            <p class="profile_address">
+            	<strong>(61) 3333-4400</strong>
             </p>
             <div data-role="tabs">
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#informacoes" data-ajax="false" class="ui-btn-active">Informações</a></li>
-                        <li><a href="#como_chegar" data-ajax="false">Como chegar</a></li>
+                        <li><a href="#como_chegar" data-ajax="false">Ítens aceitos</a></li>
                     </ul>
                 </div>
                 <div id="informacoes">
@@ -121,7 +167,7 @@
                 </div>
 			</div>
             <button data-theme="f">Telefonar</button>
-            <button data-theme="e">Enviar Mensagem</button>
+            <a href="#mensagem" data-role="button" data-theme="e">Enviar Mensagem</a>
 		</div><!-- /content -->
 	</div><!-- /page -->
     
@@ -226,6 +272,7 @@
 			<div id="map-canvas-rastrear"></div>
         	<div class="bloco">
             	<h1 class="profile_texto">Caminhão de coleta de lixo - SLU</h1>
+                <p class="profile_texto">Última atualização: 24/08 - 15:32</p>
                 <p class="profile_texto">Setor Médico Hospitalar Sul</p>
                 <p class="profile_texto">Brasília - DF, 72305-900</p>
                 <p class="profile_texto" id="latlong"><i class="fa-location-arrow"></i></p>
@@ -252,6 +299,10 @@
 				<label for="checkbox-h-7c">Retirada de móveis usados</label>
 				<input type="checkbox" name="checkbox-h-8c" id="checkbox-h-8c">
 				<label for="checkbox-h-8c">Coleta de lixo hospitalar</label>
+				<input type="checkbox" name="checkbox-h-8c" id="checkbox-h-8c">
+				<label for="checkbox-h-8c">Componentes eletrônicos</label>
+				<input type="checkbox" name="checkbox-h-8c" id="checkbox-h-8c">
+				<label for="checkbox-h-8c">Coleta de baterias</label>
 				<input type="checkbox" name="checkbox-h-8c" id="checkbox-h-8c">
 				<label for="checkbox-h-8c">Outros materiais</label>
 			</fieldset>
@@ -365,7 +416,7 @@
             <ul data-role="listview" style="top:-40px; position:relative;">
             	<li data-role="list-divider" data-theme="f">
                 	<h1 class="profile_nome">Coop. de Reciclagem ABC</h1>
-                    <p class="profile_texto">SCLRN 706 Bloco C Loja 04</p>
+                    <p class="profile_texto">(61) 3333-4400</p>
                     <p class="profile_texto">
                     	<span>
                         	Distância: 0,4 Km
@@ -385,17 +436,17 @@
             </div>
             <h2 class="profile_titulo">Coop. de Reciclagem ABC</h2>
             <p class="profile_address">
-            SCLRN 706 Bloco C Loja 04 - Asa Norte<br>Brasília - DF, 72305-900
+            	SCLRN 706 Bloco C Loja 04 - Asa Norte<br>Brasília - DF, 72305-900
             </p>
             <p class="profile_p">
-            Lorem ipsum dolor sit amet, stet iriure eu his. Per no sint dolore, nobis scriptorem mel id. Probo docendi his ad, pericula theophrastus nam te. Falli iuvaret has ut, usu ei illud nemore. Pro persequeris appellantur ullamcorper ex, duo eu feugait philosophia, epicuri consequat usu id. Option intellegam ut has.
+            	Lorem ipsum dolor sit amet, stet iriure eu his. Per no sint dolore, nobis scriptorem mel id. Probo docendi his ad, pericula theophrastus nam te. Falli iuvaret has ut, usu ei illud nemore. Pro persequeris appellantur ullamcorper ex, duo eu feugait philosophia, epicuri consequat usu id. Option intellegam ut has.
             </p>
             <button data-theme="f">Telefonar</button>
-            <button data-theme="e">Enviar Mensagem</button>
+            <a href="#mensagem" data-role="button" data-theme="e">Enviar Mensagem</a>
 		</div><!-- /content -->
 	</div><!-- /page -->
     
-    <!-- ////// SERVIÇO DETALHES ////// -->
+    <!-- ////// REPORTAR ////// -->
     <div data-role="page" id="reportar" data-theme="d">
 		<div data-role="header" data-position="fixed" data-theme="f">
 			<a href="#" data-rel="back" class="fa fa-chevron-left"></a>
@@ -407,9 +458,46 @@
         	<label for="txt_reportar">Descrição</label>
         	<textarea id="txt_reportar"></textarea>
             <button data-theme="f" class="capturar_imagem" data-img-uri="imagem_uri" data-img-vis="visualizacao_imagem">Capturar Imagem</button>
-            <button data-theme="e">Enviar</button>
+            <a href="#reportar_sucesso" data-role="button" data-theme="e">Enviar</a>
 			<img style="display:block;width:100%;" id="visualizacao_imagem" src="" />
 			<img style="display:none;" id="largeImage" src="" />
+		</div><!-- /content -->
+	</div><!-- /page -->
+    
+    <!-- ////// REPORTAR SUCESSO ////// -->
+    <div data-role="page" id="reportar_sucesso" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="f">
+			<a href="#" data-rel="back" class="fa fa-chevron-left"></a>
+			<h1>Reportar</h1>
+		</div><!-- /header -->
+    	<div data-role="content"><br>
+        	<div class="profile_address">
+            	<i class="fa fa-check-circle-o fa-5x" style="font-size:120px; color:#4CAF50;"></i>
+            </div>
+            <br>
+            <div class="profile_titulo">
+            	Mensagem enviada com sucesso!
+            </div>
+            <div class="profile_p" style="text-align:center !important;">
+            	Obrigado por colaborar para<br>manter nosso ambiente limpo.
+            </div>
+            <br><br>
+            <a href="#inicio" data-role="button" data-theme="f">Voltar</a>
+		</div><!-- /content -->
+	</div><!-- /page -->
+    
+    <!-- ////// MENSAGEM ////// -->
+    <div data-role="page" id="mensagem" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="f">
+			<a href="#" data-rel="back" class="fa fa-chevron-left"></a>
+			<h1>Mensagem</h1>
+		</div><!-- /header -->
+    	<div data-role="content">
+			<label for="assunto">Assunto:</label>
+			<input type="text" name="assunto" id="assunto" value="">
+        	<label for="mensagem">Mensagem:</label>
+        	<textarea id="mensagem"></textarea>
+            <a href="#reportar_sucesso" data-role="button" data-theme="f">Enviar</a>
 		</div><!-- /content -->
 	</div><!-- /page -->
 
