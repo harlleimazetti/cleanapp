@@ -10,11 +10,11 @@ function onDeviceReady() {
 
 var map;
 
-$(document).on("mousedown", ".tabela_home tr td", function() {
+$(document).on("touchstart", ".tabela_home tr td", function() {
 	$(this).addClass("ativa");	
 });
 
-$(document).on("mouseup", ".tabela_home tr td", function() {
+$(document).on("touchend", ".tabela_home tr td", function() {
 	$(this).removeClass("ativa");	
 });
 
