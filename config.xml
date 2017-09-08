@@ -14,7 +14,6 @@
         PhoneGap Team
     </author>
 
-	<gap:plugin name="org.apache.cordova.core.camera" />
 	<gap:plugin name="org.apache.cordova.core.geolocation" />
 	<gap:plugin name="org.apache.cordova.file" />
 	<gap:plugin name="org.apache.cordova.file-transfer" />
