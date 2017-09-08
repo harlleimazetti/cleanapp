@@ -100,17 +100,20 @@
    box-shadow:0 0 1px #333;
 }
 .tabela_home {
+	width:100% !important;
 	margin-top:20px;	
 }
 .tabela_home tr td {
+	width:50% !important;
+	max-width:50% !important;
 	border-left:1px solid #ddd;
 	border-bottom:1px solid #ddd;
-	padding:15px;
-	color:#4CAF50;
+	padding:10px;
+	color:#255F8E;
 }
 .tabela_home tr td.ativa {
 	color:#fff;
-	background-color:#4CAF50;
+	background-color:#255F8E;
 }
 .tabela_home tr td.ativa p {
 	color:#fff !important;
@@ -148,7 +151,7 @@
 }
 .profile_logo img.img_home {
 	position:relative;
-	width:130px;
+	width:130px !important;
 	height:100px;
 	left:-40px;
 	top:-20px;
