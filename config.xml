@@ -14,9 +14,9 @@
         PhoneGap Team
     </author>
 
-	<gap:plugin name="org.apache.cordova.core.geolocation" />
-	<gap:plugin name="org.apache.cordova.file" />
-	<gap:plugin name="org.apache.cordova.file-transfer" />
+	<gap:plugin name="phonegap-plugin-geolocation" />
+	<gap:plugin name="phonegap-plugin-file" />
+	<gap:plugin name="phonegap-plugin-file-transfer" />
 	
 	<gap:config-file platform="android" parent="/manifest">
 		<application android:debuggable="true" />
