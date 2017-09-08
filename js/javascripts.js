@@ -86,7 +86,7 @@ $(document).on("pageshow", "#rastrear_coleta", function () {
 	
 	var marker, i;
 	
-	var image = 'img/marker_truck.png';
+	var image = 'img/marker_car.png';
 	
 	for (i = 0; i < locations.length; i++) {  
 		marker = new google.maps.Marker({
