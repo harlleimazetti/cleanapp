@@ -2,12 +2,12 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
-        id        = "com.cleanapp.hccm"
+        id        = "com.routecar.hccm"
         version   = "1.0.0">
     <name>CleanApp</name>
 
     <description>
-        CleanApp
+        RouteCar
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
